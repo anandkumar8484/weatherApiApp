@@ -1,0 +1,200 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: auto;
+    flex-direction: column;
+    margin: auto;
+     margin-top:80px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    /* glassy look */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding:2rem;
+}
+.searchs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    gap:1rem;
+    position:relative;
+}
+.searchs input{
+    width:90%;
+    height:50px;
+    border:none;
+    outline:none;
+    font-size:1.1rem;
+    color:rgb(58, 58, 58);
+    padding-left:1rem;
+    border-radius:1.6rem;
+    background-color: white;
+}
+.search-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width:50px;
+    height:50px;
+    padding:1rem;
+    border-radius:50%;
+    cursor:pointer;
+}
+.search-icon img{
+    font-size:1.4rem;
+}
+.whether-image{
+    width:100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-bottom:.5rem;
+
+}
+.whether-image img{
+    width:60%;
+    height:60%;
+}
+.centigrade-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    color:white;
+    flex-direction: column;
+}
+.centigrade-num{
+    font-size:3.5rem;
+    font-weight:600;
+}
+.centigrade-text{
+    font-size:2rem;
+    font-weight:500;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    margin-top:2rem;
+}
+.humidity{
+    display: flex;
+    color:white;
+    gap:1rem;
+    align-items: center;
+}
+.humidity img{
+    height:40px;
+    width:40px;
+}
+.wind{
+    display: flex;
+    color:white;
+    gap:1rem;
+    align-items: center;
+}
+.humidity-text-div h1{
+    font-size:1.5rem;
+    font-weight:700;
+}
+.humidity-text-div h4{
+    font-size:1rem;
+    font-weight:300;
+}
+.wind-text-div h1{
+    font-size:1.5rem;
+    font-weight:700;
+}
+.wind-text-div h4{
+    font-size:1rem;
+    font-weight:300;
+}
+/* Dropdown container */
+.suggestion-list {
+  position: absolute;
+  top: 50.55px; /* just below the input */
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  width:85%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  z-index: 20;
+  max-height: 200px; /* prevents overflow */
+  overflow-y: auto;
+   overflow-x:hidden;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Individual items */
+.suggestion-item {
+  padding: 10px 15px;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  border-bottom: 1px solid #f0f0f0;
+ 
+}
+
+/* Remove border from last item */
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+/* Hover effect */
+.suggestion-item:hover {
+  background: #f5f7ff;
+  transform: translateX(4px);
+  color: #0077ff;
+  font-weight: 500;
+}
+
+/* Small fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar styling for suggestion list */
+.suggestion-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.suggestion-list::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 10px;
+}
+
+.suggestion-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Icon inside each suggestion item */
+.suggestion-icon {
+  font-size: 14px;
+  color: #888;
+  margin-right: 8px;
+}
+
+/* Highlighted item (for keyboard navigation) */
+.suggestion-item.highlighted {
+  background: #eaf1ff;
+  color: #0056cc;
+  font-weight: 500;
+}
