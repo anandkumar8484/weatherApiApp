@@ -182,4 +182,4 @@ const WhetherApp = () => {
     );
 };
 
-export default WhetherApp;
+export default WhetherApp
