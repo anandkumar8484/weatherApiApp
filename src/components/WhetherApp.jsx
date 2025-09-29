@@ -181,5 +181,4 @@ const WhetherApp = () => {
         </div>
     );
 };
-
 export default WhetherApp
