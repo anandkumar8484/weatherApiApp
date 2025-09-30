@@ -1,10 +1,10 @@
 import React from 'react'
-import WhetherApp from './components/WhetherApp'
+import WeatherApp from './components/WeatherApp'
 
 const App = () => {
   return (
     <div>
-      <WhetherApp/>
+      <WeatherApp/>
     </div>
   )
 }

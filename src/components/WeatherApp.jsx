@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./WhetherApp.css";
+import "./WeatherApp.css";
 import search_icon from "../assets/search.png";
 import clear_icon from "../assets/clear.png";
 import humidityImage from "../assets/humidity.png";
@@ -9,7 +9,7 @@ import drizzle_icon from "../assets/drizzle.png";
 import rain_icon from "../assets/rain.png";
 import snow_icon from "../assets/snow.png";
 
-const WhetherApp = () => {
+const WeatherApp = () => {
     const inputRef = useRef();
     const [weatherData, setWeatherData] = useState(false);
     const [history, setHistory] = useState(
@@ -38,7 +38,7 @@ const WhetherApp = () => {
     const search = async (city) => {
         if (city === "") {
             alert("Enter City Name");
-            return;
+            return
         }
         try {
             const key = import.meta.env.VITE_API_ID;
@@ -59,6 +59,7 @@ const WhetherApp = () => {
                 location: data.name,
                 icon: icon,
             });
+            
 
             // ✅ Save to history
             const updatedHistory = [
@@ -181,4 +182,4 @@ const WhetherApp = () => {
         </div>
     );
 };
-export default WhetherApp
+export default WeatherApp
